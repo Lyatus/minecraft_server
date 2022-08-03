@@ -48,7 +48,7 @@ def ensure_server_running(should_run):
 
     if should_run:
         if server_proc == None:
-            print("Minecraft starting...")
+            print("Minecraft server starting...")
             subprocess.run(["java", "-Xms1024M", "-Xmx1024M", "-jar", "server.jar", "nogui"], start_new_session=True, cwd=os.getcwd())
         else:
             print("Minecraft server already running")
