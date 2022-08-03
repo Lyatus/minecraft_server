@@ -15,7 +15,7 @@ def json_query(url):
 def update_server():
     version_manifest = json_query("https://launchermeta.mojang.com/mc/game/version_manifest.json")
     latest_version_id = version_manifest["latest"]["release"]
-    print("Minecraft server latest version: " + latest_version_id)
+    print("Minecraft server latest version:", latest_version_id)
 
     latest_version_meta = next(filter(lambda v: v["id"] == latest_version_id, version_manifest["versions"]))
     latest_version = json_query(latest_version_meta["url"])
