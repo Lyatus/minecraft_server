@@ -60,6 +60,8 @@ def ensure_server_running(should_run):
             print("Minecraft server already down")
 
 now = datetime.datetime.now()
+print("Time:", now)
+
 if now.hour == 5 and now.minute < 10:
     ensure_server_running(False)
     update_server()
